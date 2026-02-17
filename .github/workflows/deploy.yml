@@ -22,11 +22,12 @@ jobs:
         run: composer install --no-dev --optimize-autoloader
 
       - name: Deploy via FTP
-        uses: samkirkland/ftp-deploy-action@v4
+        uses: samkirkland/ftp-deploy-action@v4.3.5
+
         with:
           server: ftp.henny.my.id
-          username: ${{ secrets.FTP_USER }}
-          password: ${{ secrets.FTP_PASS }}
+          username: test-user-henny
+          password: test-user-henny
           server-dir: /laravel-app/
           exclude: |
             **/.env
