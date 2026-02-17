@@ -28,6 +28,9 @@ jobs:
           server: ftp.henny.my.id
           username: test-user-henny
           password: test-user-henny
+          protocol: ftps
+          port: 21
+          passive: true
           server-dir: /laravel-app/
           exclude: |
             **/.env
